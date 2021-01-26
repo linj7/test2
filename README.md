@@ -1,4 +1,7 @@
 问题1:测试运行 `$ git clone` 命令后是否会自动添加远程仓库？
 答：是。
 
-问题2:`$ git fetch [remote-repository-name]` 命令会把远程仓库里的所有分支的更新都下载下来对吗？然后在merge前通过 `$ git branch` 可以看到这些有更新的分支？
+问题2:`$ git fetch [remote-alias]` 命令会把远程仓库里的所有分支的更新都下载下来对吗？然后在merge前通过 `$ git branch` 可以看到这些有更新的分支？
+答：是；通过 `$ git branch` 命令无法直接看到这些下载来的分支，但是它们是存在的，引用是 `[remote-alias]/[remote-branch]` ，可以用于查看或者合并。
+
+问题3:假如 `$ git fetch` 命令后面不加具体的远程仓库，那是会把所有添加的远程仓库的更新都下载下来吗？
